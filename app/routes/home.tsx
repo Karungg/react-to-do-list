@@ -1,5 +1,8 @@
+import Layout from "~/components/layout";
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import { Button } from "~/components/ui/button";
+import { InputForm } from "~/components/inputForm";
+import { Toaster } from "sonner";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -9,5 +12,11 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return <Welcome />;
+  return (
+    <Layout>
+      <InputForm />
+      <Button>Login</Button>
+      <Toaster />
+    </Layout>
+  );
 }
