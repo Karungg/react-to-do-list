@@ -8,6 +8,7 @@ import { toast, Toaster } from "sonner";
 import { Form } from "~/components/ui/form";
 import { Button } from "~/components/ui/button";
 import { InputField } from "./inputForm";
+import { Checkbox } from "./ui/checkbox";
 
 const LoginSchema = z.object({
   email: z.string().email({ message: "Invalid email address" }),
@@ -54,7 +55,22 @@ export function LoginForm() {
               label="Password"
               placeholder="********"
             />
+            <div className="flex items-center space-x-2">
+              <Checkbox id="terms2" />
+              <label
+                htmlFor="terms2"
+                className="text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              >
+                Remember me
+              </label>
+            </div>
             <Button type="submit">Login</Button>
+            <p className="text-sm">
+              Already have account?{" "}
+              <a className="hover:underline" href="#">
+                Sign in here
+              </a>
+            </p>
           </form>
         </Form>
       </div>
