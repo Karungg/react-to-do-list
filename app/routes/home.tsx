@@ -4,8 +4,8 @@ import { LoginForm } from "~/components/loginForm";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "To Do List" },
+    { name: "description", content: "To Do List App" },
   ];
 }
 
