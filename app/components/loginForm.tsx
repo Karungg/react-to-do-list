@@ -1,4 +1,3 @@
-// components/LoginForm.tsx
 "use client";
 
 import { z } from "zod";
@@ -39,8 +38,8 @@ export function LoginForm() {
   return (
     <div>
       <Toaster />
-      <div className="w-2/3 mx-auto">
-        <h2 className="text-2xl font-semibold mb-6 text-center">Login</h2>
+      <div className="w-3/4 sm:w-2/3 mx-auto">
+        <h2 className="text-2xl font-medium mb-6 text-center">Login</h2>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
             <InputField
@@ -66,9 +65,9 @@ export function LoginForm() {
             </div>
             <Button type="submit">Login</Button>
             <p className="text-sm">
-              Already have account?{" "}
+              Not have account?{" "}
               <a className="hover:underline" href="#">
-                Sign in here
+                Sign up here
               </a>
             </p>
           </form>
