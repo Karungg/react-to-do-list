@@ -16,6 +16,7 @@ interface InputFieldProps {
   label: string;
   placeholder?: string;
   description?: string;
+  type?: string;
 }
 
 export function InputField({
@@ -24,6 +25,7 @@ export function InputField({
   label,
   placeholder,
   description,
+  type = "text",
 }: InputFieldProps) {
   return (
     <FormField
@@ -33,7 +35,7 @@ export function InputField({
         <FormItem>
           <FormLabel>{label}</FormLabel>
           <FormControl>
-            <Input placeholder={placeholder} {...field} />
+            <Input type={type} placeholder={placeholder} {...field} />
           </FormControl>
           {description && <FormDescription>{description}</FormDescription>}
           <FormMessage />

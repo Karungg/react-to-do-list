@@ -48,12 +48,14 @@ export function LoginForm() {
               name="email"
               label="Email"
               placeholder="you@example.com"
+              type="email"
             />
             <InputField
               control={form.control}
               name="password"
               label="Password"
               placeholder="********"
+              type="password"
             />
             <div className="flex items-center space-x-2">
               <Checkbox id="terms2" />
